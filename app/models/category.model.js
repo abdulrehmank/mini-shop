@@ -5,7 +5,9 @@ const CategorySchema = mongoose.Schema({
         type: String
     },
     slug: {
-        type: String
+        type: String,
+        unique: true,
+        lowercase: true
     },
     parentCategory: {
         type: mongoose.Schema.Types.ObjectId,
